@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18 d17.14
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNUGGLEINN_CASESTUDY", "SNUGGLEINN_CASESTUDY\SNUGGLEINN_CASESTUDY.csproj", "{F983047A-793A-4419-928D-EF90E0FFD86E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyTesting", "CaseStudyTesting\CaseStudyTesting.csproj", "{D2741C53-7F8F-4E9C-ACA5-E8D3CEFEDB17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F983047A-793A-4419-928D-EF90E0FFD86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F983047A-793A-4419-928D-EF90E0FFD86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F983047A-793A-4419-928D-EF90E0FFD86E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2741C53-7F8F-4E9C-ACA5-E8D3CEFEDB17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2741C53-7F8F-4E9C-ACA5-E8D3CEFEDB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2741C53-7F8F-4E9C-ACA5-E8D3CEFEDB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2741C53-7F8F-4E9C-ACA5-E8D3CEFEDB17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

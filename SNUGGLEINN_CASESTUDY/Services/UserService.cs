@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SNUGGLEINN_CASESTUDY.Services
 {
-    public class UserService : IUserService
+    public class UserService
     {
         private readonly IUserRepository _userRepository;
 
@@ -21,28 +21,32 @@ namespace SNUGGLEINN_CASESTUDY.Services
 
         public Task<User> GetUserByIdAsync(int id)
         {
-            return _userRepository.GetByIdAsync(id);
+            return _userRepository.GetUserByIdAsync(id);
         }
 
-        public Task<User> AddUserAsync(User user)
+        public Task<User> GetUserByEmailAsync(string email)
         {
-            // extra logic can be added here later
+            return _userRepository.GetUserByEmailAsync(email);
+        }
+
+        public Task AddUserAsync(User user)
+        {
             return _userRepository.AddUserAsync(user);
         }
 
-        public Task<User> UpdateUserAsync(User user)
+        public Task UpdateUserAsync(User user)
         {
             return _userRepository.UpdateUserAsync(user);
         }
 
-        public Task<bool> DeleteUserAsync(int id)
+        public Task DeleteUserAsync(int id)
         {
-            return _userRepository.DeleteAsync(id);
+            return _userRepository.DeleteUserAsync(id);
+        }
+        public async Task<User> AuthenticateAsync(string email, string password)
+        {
+            return await _userRepository.GetUserByEmailAndPasswordAsync(email, password);
         }
 
-        public Task<User> AuthenticateAsync(string email, string password)
-        {
-            return _userRepository.AuthenticateAsync(email, password);
-        }
     }
 }

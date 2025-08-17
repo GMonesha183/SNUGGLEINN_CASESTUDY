@@ -1,11 +1,24 @@
-﻿namespace SNUGGLEINN_CASESTUDY.DTOs
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SNUGGLEINN_CASESTUDY.DTOs
 {
     public class UserRegisterDto
     {
-        public string FullName { get; set; } // Full name of the user
-        public string Email { get; set; } // Email address of the user
-        public string Password { get; set; } // Password for the user account
-        public string Role { get; set; } // Role of the user (e.g., "Admin", "User", "Guest")
-        public string PhoneNumber { get; set; } // Phone number of the user
+        [Required(ErrorMessage = "Full name is required")]
+        public string FullName { get; set; }
+
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Invalid email format")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Password is required")]
+        public string Password { get; set; }
+
+        [Required(ErrorMessage = "Role is required")]
+        public string Role { get; set; }
+
+        [Required(ErrorMessage = "Phone number is required")]
+        [Phone(ErrorMessage = "Invalid phone number")]
+        public string PhoneNumber { get; set; }
     }
 }

@@ -10,5 +10,6 @@ namespace SNUGGLEINN_CASESTUDY.Interfaces
         Task<Refund> GetRefundByIdAsync(int id);
         Task RequestRefundAsync(Refund refund);
         Task UpdateRefundStatusAsync(int refundId, string status);
+        Task<IEnumerable<Refund>> GetAllRefundsAsync();
     }
 }

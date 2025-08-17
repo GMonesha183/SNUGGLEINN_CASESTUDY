@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using SNUGGLEINN_CASESTUDY.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using SNUGGLEINN_CASESTUDY.Models;
 
 namespace SNUGGLEINN_CASESTUDY.Interfaces
 {
@@ -11,5 +11,8 @@ namespace SNUGGLEINN_CASESTUDY.Interfaces
         Task AddBookingAsync(Booking booking);
         Task UpdateBookingAsync(Booking booking);
         Task CancelBookingAsync(int id);
+        Task<List<Booking>> GetBookingsByOwnerIdAsync(int ownerId);
+        Task<List<Booking>> GetAllBookingsAsync();
+        Task<List<Booking>> GetBookingsByRoomIdAsync(int roomId);
     }
 }

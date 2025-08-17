@@ -12,4 +12,5 @@ namespace SNUGGLEINN_CASESTUDY.Interfaces
         Task UpdateHotelAsync(Hotel hotel);
         Task DeleteHotelAsync(int id);
     }
+
 }

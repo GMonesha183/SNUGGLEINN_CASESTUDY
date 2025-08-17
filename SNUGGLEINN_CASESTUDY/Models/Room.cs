@@ -21,6 +21,8 @@ namespace SNUGGLEINN_CASESTUDY.Models
         [MaxLength(200)]
         public string Amenities { get; set; } // Additional amenities provided in the room
 
+        public string ImgUrl { get; set; } // URL for the room image
+
         public ICollection<Booking> Bookings { get; set; } // Navigation property for bookings associated with the room
     }
 }
